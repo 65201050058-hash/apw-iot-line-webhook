@@ -7,6 +7,9 @@ import json
 
 app = Flask(__name__)
 
+@app.route("/callback", methods=["POST"])
+def callback():
+    return "OK", 200
 # ดึง Channel Secret จาก Environment Variable
 CHANNEL_SECRET = os.environ.get("CHANNEL_SECRET")
 
